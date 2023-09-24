@@ -1,0 +1,32 @@
+2023-09-24 09:07:31,572 INFO autoreload Watching for file changes with StatReloader
+2023-09-24 09:07:34,469 WARNING basehttp "GET / HTTP/1.1" 404 179
+2023-09-24 09:07:37,158 INFO basehttp "GET /news/ HTTP/1.1" 200 11677
+2023-09-24 09:07:37,614 INFO basehttp "GET /news/ HTTP/1.1" 200 11677
+2023-09-24 09:07:38,885 INFO basehttp "GET /news/ HTTP/1.1" 200 11677
+2023-09-24 09:07:39,961 INFO basehttp "GET /news/search/ HTTP/1.1" 200 8034
+2023-09-24 09:07:40,697 INFO basehttp "GET /news/ HTTP/1.1" 200 11677
+2023-09-24 09:08:03,845 INFO autoreload D:\SkillFactory\Projects\pythonProject6\NewsPortal\newapp\views.py changed, reloading.
+2023-09-24 09:08:04,308 INFO autoreload Watching for file changes with StatReloader
+2023-09-24 09:08:46,528 INFO autoreload D:\SkillFactory\Projects\pythonProject6\NewsPortal\newapp\views.py changed, reloading.
+2023-09-24 09:08:46,978 INFO autoreload Watching for file changes with StatReloader
+2023-09-24 09:08:53,957 WARNING basehttp "GET / HTTP/1.1" 404 179
+2023-09-24 09:08:55,977 WARNING basehttp "GET / HTTP/1.1" 404 179
+2023-09-24 09:08:58,620 INFO basehttp "GET /news/ HTTP/1.1" 200 11677
+2023-09-24 09:08:59,186 INFO basehttp "GET /news/ HTTP/1.1" 200 11677
+2023-09-24 09:09:00,879 INFO basehttp "GET /news/search/ HTTP/1.1" 200 8034
+2023-09-24 09:09:02,091 INFO basehttp "GET /accounts/login/ HTTP/1.1" 200 1977
+2023-09-24 09:09:04,129 INFO basehttp "GET /news/ HTTP/1.1" 200 11677
+2023-09-24 09:09:04,940 INFO basehttp "GET /news/14 HTTP/1.1" 200 4487
+2023-09-24 09:09:05,651 INFO basehttp "GET /news/ HTTP/1.1" 200 11677
+2023-09-24 09:11:19,326 WARNING basehttp "GET / HTTP/1.1" 404 179
+2023-09-24 09:11:33,538 INFO basehttp "GET /news/ HTTP/1.1" 200 11677
+2023-09-24 09:11:34,330 INFO basehttp "GET /news/ HTTP/1.1" 200 11677
+2023-09-24 09:11:35,870 INFO basehttp "GET /news/search/ HTTP/1.1" 200 8034
+2023-09-24 09:11:36,543 INFO basehttp "GET /news/ HTTP/1.1" 200 11677
+2023-09-24 09:14:14,518 INFO autoreload Watching for file changes with StatReloader
+2023-09-24 09:39:56,999 INFO autoreload Watching for file changes with StatReloader
+2023-09-24 09:39:58,523 WARNING basehttp "GET / HTTP/1.1" 404 179
+2023-09-24 09:40:00,874 INFO basehttp "GET /news/ HTTP/1.1" 200 12822
+2023-09-24 09:40:01,314 INFO basehttp "GET /news/ HTTP/1.1" 200 12822
+2023-09-24 09:40:02,575 INFO basehttp "GET /news/create/ HTTP/1.1" 200 4445
+2023-09-24 09:40:15,899 INFO autoreload D:\SkillFactory\Projects\pythonProject6\NewsPortal\NewsPortal\settings.py changed, reloading.

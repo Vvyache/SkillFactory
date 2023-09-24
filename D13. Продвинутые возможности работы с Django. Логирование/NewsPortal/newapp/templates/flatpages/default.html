@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>News Portal</title>
+
+        {% load static %}
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+   <div class="container">
+       <a class="navbar-brand" href="/news/">News Portal</a>
+       <a class="navbar-brand" href="/news/search">Поиск новостей</a>
+       {% if perms.newapp.add_news %}
+       <a class="navbar-brand" href="/news/create">Создать новость</a>
+       {% endif %}
+       <a class="navbar-brand" href="/news/subscriptions/">Подписка</a>
+       <a class="navbar-brand" href="/accounts/login/">Авторизация/Регистрация
+           (<span style="color: #ff0000;"><span style="color: #ff0000;">{{ user.username }}</span></span>)</a>  <!-- Пользователь выделяется красным -->
+       <a class="navbar-brand" href="/accounts/logout/">Выход</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse"
+               data-target="#navbarResponsive"
+               aria-controls="navbarResponsive" aria-expanded="false"
+               aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarResponsive">
+<!--           <ul class="navbar-nav ml-auto">-->
+<!--               <li class="nav-item active">-->
+<!--                   <a class="nav-link" href="#">Home-->
+<!--                       <span class="sr-only">(current)</span>-->
+<!--                   </a>-->
+<!--               </li>-->
+<!--               <li class="nav-item">-->
+<!--                   <a class="nav-link" href="/about/">About</a>-->
+<!--               </li>-->
+<!--               <li class="nav-item">-->
+<!--                   <a class="nav-link" href="/contacts/">Contacts</a>-->
+<!--               </li>-->
+<!--               <li class="nav-item">-->
+<!--                   <a class="nav-link" href="/contacts1/">Recurring contacts</a>-->
+<!--               </li>-->
+<!--               <li class="nav-item">-->
+<!--                   <a class="nav-link" href="/contacts2/">Modified contacts</a>-->
+<!--               </li>-->
+<!--               <li class="nav-item">-->
+<!--                   <a class="nav-link" href="/contacts3/">Hidden contacts</a>-->
+<!--               </li>-->
+<!--           </ul>-->
+       </div>
+   </div>
+</nav>
+        <!-- Page content-->
+        <div class="container">
+            <div class="row">
+                 <div class="col-lg-12 text-center">
+                     {% block content %}
+                     {{ flatpage.content }}
+                     {% endblock content %}
+                 </div>
+            </div>
+        </div>
+    </body>
+</html>
