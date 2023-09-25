@@ -30,3 +30,14 @@
 2023-09-24 09:40:01,314 INFO basehttp "GET /news/ HTTP/1.1" 200 12822
 2023-09-24 09:40:02,575 INFO basehttp "GET /news/create/ HTTP/1.1" 200 4445
 2023-09-24 09:40:15,899 INFO autoreload D:\SkillFactory\Projects\pythonProject6\NewsPortal\NewsPortal\settings.py changed, reloading.
+2023-09-25 10:01:51,065 INFO autoreload Watching for file changes with StatReloader
+2023-09-25 11:12:04,364 INFO autoreload D:\SkillFactory\Projects\pythonProject6\NewsPortal\NewsPortal\settings.py changed, reloading.
+2023-09-25 11:55:37,089 INFO autoreload Watching for file changes with StatReloader
+2023-09-25 11:59:07,065 INFO autoreload D:\SkillFactory\Projects\pythonProject6\NewsPortal\NewsPortal\settings.py changed, reloading.
+2023-09-25 14:07:47,978 INFO autoreload Watching for file changes with StatReloader
+2023-09-25 14:08:03,474 INFO autoreload Watching for file changes with StatReloader
+2023-09-25 14:08:44,955 INFO autoreload D:\SkillFactory\Projects\pythonProject6\NewsPortal\NewsPortal\settings.py changed, reloading.
+2023-09-25 14:11:44,595 INFO autoreload Watching for file changes with StatReloader
+2023-09-25 14:12:17,916 INFO autoreload D:\SkillFactory\Projects\pythonProject6\NewsPortal\NewsPortal\settings.py changed, reloading.
+2023-09-25 14:12:18,382 INFO autoreload Watching for file changes with StatReloader
+2023-09-25 14:13:01,921 INFO autoreload D:\SkillFactory\Projects\pythonProject6\NewsPortal\NewsPortal\settings.py changed, reloading.

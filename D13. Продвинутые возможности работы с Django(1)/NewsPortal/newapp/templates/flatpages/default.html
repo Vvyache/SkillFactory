@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+{% load i18n %}
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
@@ -12,9 +14,14 @@
         <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
     </head>
     <body>
+
         <!-- Responsive navbar-->
+        {{ string }}
+        {% trans "Check out my new cool translation" %}
+        {% trans "Поиск новостей" %}
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
    <div class="container">
+
        <a class="navbar-brand" href="/news/">News Portal</a>
        <a class="navbar-brand" href="/news/search">Поиск новостей</a>
        {% if perms.newapp.add_news %}
@@ -24,6 +31,25 @@
        <a class="navbar-brand" href="/accounts/login/">Авторизация/Регистрация
            (<span style="color: #ff0000;"><span style="color: #ff0000;">{{ user.username }}</span></span>)</a>  <!-- Пользователь выделяется красным -->
        <a class="navbar-brand" href="/accounts/logout/">Выход</a>
+<!--________________________________________________________________________________________________-->
+<!--                                Кнопка смены языка-->
+       <form action="{% url 'set_language' %}" method="POST"> {% csrf_token %} <!-- Не забываем по csrf_token для POST запросов -->
+        <input type="hidden" name="next" value="{{ redirect_to }}">
+        {% get_current_language as LANGUAGE_CODE %}
+        <select name="language" id="">
+            {% get_available_languages as LANGUAGES %} <!-- получаем языки -->
+            {% get_language_info_list for LANGUAGES as languages %} <!-- Помещаем их в список languages -->
+
+            {% for language in languages %} <!-- Итерируясь по списку, выводим их название на языке пользователя и код -->
+                <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                    {{ language.name_local }} - {{ language.code }}
+                </option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="set">
+    </form>
+<!--                                    Конец кнопки смены языка-->
+<!--________________________________________________________________________________________________-->
        <button class="navbar-toggler" type="button" data-toggle="collapse"
                data-target="#navbarResponsive"
                aria-controls="navbarResponsive" aria-expanded="false"
