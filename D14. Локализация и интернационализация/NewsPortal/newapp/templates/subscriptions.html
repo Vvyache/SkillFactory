@@ -1,0 +1,27 @@
+{% extends 'flatpages/default.html' %}
+{% load i18n %}
+{% block title %}
+Subscriptions
+{% endblock title %}
+
+{% block content %}
+<h1>{% trans 'Subscribe to the news category' %}</h1>
+<hr>
+    {% for category in categories  %}
+        <p>
+            {{ category.name }}
+            <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="category_id" value="{{ category.id }}" />
+
+                {% if category.user_subscribed %}
+                    <button disabled>{% trans 'Subscribe' %}</button>
+                    <button name="action" value="unsubscribe">{% trans 'Unsubscribe' %}</button>
+                {% else %}
+                    <button name="action" value="subscribe">{% trans 'Subscribe' %}</button>
+                    <button disabled>{% trans 'Unsubscribe' %}</button>
+                {% endif %}
+            </form>
+        </p>
+    {% endfor %}
+{% endblock content %}

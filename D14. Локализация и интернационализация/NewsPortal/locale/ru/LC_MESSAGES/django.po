@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-25 18:17+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: .\newapp\templates\account\email\base_message.txt:1
+#, python-format
+msgid "Привет от %(site_name)s!"
+msgstr ""
+
+#: .\newapp\templates\account\email\base_message.txt:5
+#, python-format
+msgid ""
+"Спасибо за использование %(site_name)s!\n"
+"%(site_domain)s"
+msgstr ""
+
+#: .\newapp\templates\account\email\email_confirmation_message.txt:5
+#, python-format
+msgid ""
+"Вы получили это сообщение, потому что пользователь %(user_display)s указал "
+"этот email при регистрации на сайте %(site_domain)s.\n"
+"\n"
+"Для подтверждения регистрации пройдите по ссылке %(activate_url)s\n"
+"\n"
+"Хорошего дня!\n"
+msgstr ""
+
+#: .\newapp\templates\flatpages\default.html:10
+#: .\newapp\templates\flatpages\default.html:20
+msgid "News Portal"
+msgstr "Новостной портал"
+
+#: .\newapp\templates\flatpages\default.html:21
+msgid "News search"
+msgstr "Поиск новостей"
+
+#: .\newapp\templates\flatpages\default.html:23
+#: .\newapp\templates\news_create.html:4
+msgid "Create news"
+msgstr "Создать новость"
+
+#: .\newapp\templates\flatpages\default.html:25
+msgid "Subscription"
+msgstr "Подписка"
+
+#: .\newapp\templates\flatpages\default.html:26
+msgid "Authorization/Registration"
+msgstr "Авторизация/Регистрация"
+
+#: .\newapp\templates\flatpages\default.html:28
+msgid "Logout"
+msgstr "Выход"
+
+#: .\newapp\templates\news.html:14
+msgid "All news on the page"
+msgstr "Все новости на странице"
+
+#: .\newapp\templates\news.html:39
+msgid "Add news"
+msgstr "Добавить новость"
+
+#: .\newapp\templates\news.html:45
+msgid "We will announce amazing news soon!!!"
+msgstr "Скоро сообщим удивительную новость!!!"
+
+#: .\newapp\templates\news.html:53 .\newapp\templates\news_search.html:39
+msgid "Heading"
+msgstr "Заголовок"
+
+#: .\newapp\templates\news.html:56 .\newapp\templates\news_search.html:42
+msgid "Date of publication"
+msgstr "Дата публикации"
+
+#: .\newapp\templates\news.html:59 .\newapp\templates\news_search.html:45
+msgid "Description"
+msgstr "Описание"
+
+#: .\newapp\templates\news.html:62 .\newapp\templates\news_search.html:48
+msgid "Category news"
+msgstr "Категория новостей"
+
+#: .\newapp\templates\news.html:65 .\newapp\templates\news_search.html:51
+msgid "Type"
+msgstr "Тип"
+
+#: .\newapp\templates\news.html:72
+msgid "Actions"
+msgstr "Действия"
+
+#: .\newapp\templates\news.html:94
+msgid "Edit"
+msgstr "Редактировать"
+
+#: .\newapp\templates\news.html:97
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\newapp\templates\news_search.html:14
+msgid "Search for news on the page"
+msgstr "Поиск новости на странице"
+
+#: .\newapp\templates\news_search.html:67
+msgid "There is no news!"
+msgstr "Новостей нет"
+
+#: .\newapp\templates\subscriptions.html:8
+msgid "Subscribe to the news category"
+msgstr "Подписаться на категорию новостей"
+
+#: .\newapp\templates\subscriptions.html:18
+#: .\newapp\templates\subscriptions.html:21
+msgid "Subscribe"
+msgstr "Подписаться"
+
+#: .\newapp\templates\subscriptions.html:19
+#: .\newapp\templates\subscriptions.html:22
+msgid "Unsubscribe"
+msgstr "Отписаться"
