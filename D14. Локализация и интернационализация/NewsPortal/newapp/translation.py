@@ -11,7 +11,7 @@ class AuthorTranslationOptions(TranslationOptions):
 
 @register(News)
 class NewsTranslationOptions(TranslationOptions):
-    fields = ('name',)
+    fields = ('name', 'description',)
 
 
 @register(Comment)

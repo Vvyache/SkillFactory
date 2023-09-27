@@ -67,7 +67,7 @@ class News(models.Model):
         self.save()
 
     def dislike(self):
-        self.rating += 1
+        self.rating -= 1
         self.save()
 
     def preview(self):
@@ -95,8 +95,9 @@ class CategoryNews(models.Model):
     # названия категорий тоже не должны повторяться
     name = models.CharField(max_length=100, unique=True)
     # subscribers = models.ManyToManyField(User, through='Subscription')
-    subscribers = models.ManyToManyField(User, blank=True, related_name='categories', through='Subscription')  # 28.08 Убрал Null=True !!!!!!!!!!!!
+    # subscribers = models.ManyToManyField(User, blank=True, related_name='categories', through='Subscription')  # 28.08 Убрал Null=True !!!!!!!!!!!!
     # subscribers = models.ManyToManyField('self', through='Subscription', related_name='categories', blank=True) # 26.09 Добавил для корректного выполения миграций
+    subscribers = models.ManyToManyField(User, blank=True, through='Subscription', through_fields=('category', 'user')) # Предложение GPT
 
     def __str__(self):
         return self.name.title()

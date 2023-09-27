@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-25 18:17+0500\n"
+"POT-Creation-Date: 2023-09-27 14:42+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -112,13 +112,25 @@ msgstr "Редактировать"
 msgid "Delete"
 msgstr "Удалить"
 
+#: .\newapp\templates\news.html:107 .\newapp\templates\news_search.html:67
+msgid "There is no news!"
+msgstr "Новостей нет"
+
 #: .\newapp\templates\news_search.html:14
 msgid "Search for news on the page"
 msgstr "Поиск новости на странице"
 
-#: .\newapp\templates\news_search.html:67
-msgid "There is no news!"
-msgstr "Новостей нет"
+#: .\newapp\templates\news_search.html:23
+msgid "Search"
+msgstr "Поиск"
+
+#: .\newapp\templates\specificnews.html:16
+msgid "Author:"
+msgstr "Автор"
+
+#: .\newapp\templates\specificnews.html:17
+msgid "Date publication:"
+msgstr "Дата публикации"
 
 #: .\newapp\templates\subscriptions.html:8
 msgid "Subscribe to the news category"
