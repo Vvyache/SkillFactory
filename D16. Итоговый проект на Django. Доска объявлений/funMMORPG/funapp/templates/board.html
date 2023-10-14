@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Доска объявлений fun MMORPG</title>
+</head>
+<body>
+<a href="/board/register/">Регистрация</a>
+{% if user.is_authenticated %}
+    <a href="/board/logout/">Выйти</a>
+    <a href="/board/create/">Создать объявление</a>
+    <a href="/board/user_responses/">Отклики пользователя</a>
+    <p>Вход {{ user.username }}</p>
+{% else %}
+    <a href="/board/login/">Вход</a>
+{% endif %}
+
+<h1>Доска объявлений fun MMORPG</h1>
+{% for ad in board %}
+<div>
+    <h2># {{ ad.id }}. <a href="{% url 'board_extended' ad.id %}">{{ ad.title }}</a></h2>
+    <p>Автор: {{ ad.author }}</p>
+    <p>Категория: {{ ad.category }}</p>
+    <p>Дата создания: {{ ad.date }}</p>
+
+<!--    {% if ad.image %}-->
+<!--        <img src="{{ ad.image.url }}" alt="{{ ad.title }}">-->
+<!--    {% endif %}-->
+
+<!--    {% if ad.video %}-->
+<!--        <video width="320" height="240" controls>-->
+<!--            <source src="{{ ad.video.url }}" type="video/mp4">-->
+<!--        </video>-->
+<!--    {% endif %}-->
+
+    <a href="{% url 'board_update' ad.id %}">Редактировать</a>
+    <a href="{% url 'create_response' ad.id %}">Отклик</a>
+</div>
+{% empty %}
+<p>На текущий момент объявлений нет.</p>
+{% endfor %}
+</body>
+</html>

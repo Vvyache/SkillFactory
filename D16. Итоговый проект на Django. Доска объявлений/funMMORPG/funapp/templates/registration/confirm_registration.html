@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Подтверждение регистрации</title>
+</head>
+<body>
+    <h1>Подтверждение регистрации</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Подтвердить регистрацию</button>
+    </form>
+</body>
+</html>

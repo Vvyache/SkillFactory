@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1><a href="/board/">К доске объявлений</a></h1>
+{% block content %}
+<h2>{{ board.title }}</h2>
+<pre></pre>
+<h4>{{ board.description }}</h4>
+<h4>Категория: {{ board.category }}</h4>
+<h4>Автор: {{ board.author }}</h4>
+<h4>Дата: {{ board.date }}</h4>
+
+{% if board.image %}
+    <img src="{{ board.image.url }}" alt="{{ board.title }}">
+{% endif %}
+
+{% if board.video %}
+    <video width="320" height="240" controls>
+        <source src="{{ board.video.url }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+{% endif %}
+
+<pre></pre>
+
+{% endblock content %}

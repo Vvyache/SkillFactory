@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% block content %}
+    <h1><a href="/board/">К доске объявлений</a></h1>
+
+<form method="post" action="{% url 'login' %}">
+{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="login">
+    <input type="hidden" name="next" value="{{ next }}">
+</form>
+
+{% endblock %}

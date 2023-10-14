@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% block content %}
+<h1><a href="/board/">К доске объявлений</a></h1>
+{% endblock content %}
+{% if perms.funapp.add_board %}
+    <a href="{% url 'board_create' %}">Создать объявление</a>
+{% endif %}
+<hr>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+<!--    <input type="file" name="image" accept="image/*"> &lt;!&ndash; Поле для выбора изображения &ndash;&gt;-->
+<!--    <input type="file" name="video" accept="video/*"> &lt;!&ndash; Поле для выбора видео &ndash;&gt;-->
+    <input type="submit" value="Сохранить" />
+</form>
+
+

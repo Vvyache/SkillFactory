@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Отправить отклик</title>
+</head>
+<body>
+    <h1><a href="/board/">К доске объявлений</a></h1>
+
+    <h1>Отправить отклик на объявление</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>

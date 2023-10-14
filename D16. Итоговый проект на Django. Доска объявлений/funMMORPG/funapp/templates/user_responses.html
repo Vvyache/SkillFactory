@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Отклики пользователя</title>
+</head>
+<body>
+    <h1><a href="/board/">К доске объявлений</a></h1>
+
+    <h1>Отклики пользователя {{ author.username }}</h1>
+
+
+    <form method="post">
+        {% csrf_token %}
+        {{ filter_form.as_p }}
+
+        <button type="submit" name="filter_button">Применить фильтр</button>
+
+        {{ delete_form.as_p }}
+
+        <button type="submit" name="delete_button">Удалить выбранные</button>
+
+        {{ accept_form.as_p }}
+
+        <button type="submit" name="accept_button">Принять выбранные</button>
+    </form>
+
+    <ul>
+        {% for response in user_responses %}
+            <li>
+                {{ response.text }}
+                {% if response.status %}
+                    (Принят)
+                {% else %}
+                    (Не принят)
+                {% endif %}
+            </li>
+        {% empty %}
+            <li>У вас нет откликов.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% block content %}
+
+<p>You are logged out!</p>
+<a  href="{% url 'logout' %}">Log in again</a>
+
+{% endblock %}
